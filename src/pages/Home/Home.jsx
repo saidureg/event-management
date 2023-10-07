@@ -1,12 +1,17 @@
 import Banner from "../../components/Header/Banner";
 import Navbar from "../../components/Header/Navbar";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
     <div>
       <Navbar></Navbar>
       <Banner />
-      {/* <h3 className="text-4xl">Home</h3> */}
+      {/* services */}
+      <div>
+        <h3>services</h3>
+      </div>
+      <Footer />
     </div>
   );
 };
