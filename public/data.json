@@ -1,0 +1,160 @@
+[
+  {
+    "id": 1,
+    "name": "Conferences and Seminars",
+    "image": "conference-image.jpg",
+    "price": "Starting at $500",
+    "description": "Our professional conference and seminar management services are tailored to meet the unique needs of your business. We meticulously plan and execute conferences and seminars that engage your audience and deliver your message effectively. From finding the perfect venue to organizing impactful keynote speakers, our team handles every detail. We create a seamless experience for both presenters and attendees, ensuring smooth registration processes and interactive sessions. Let us transform your ideas into successful, knowledge-sharing events.",
+    "details": {
+      "servicesInclude": [
+        "Venue selection and setup for impactful presentations",
+        "Expert speaker coordination and management",
+        "Interactive session planning and facilitation",
+        "Seamless attendee registration and engagement",
+        "Technical and AV equipment support",
+        "Catering and refreshment services"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "name": "Trade Shows and Expos",
+    "image": "tradeshow-image.jpg",
+    "price": "Starting at $800",
+    "description": "Make a lasting impression at trade shows and expos with our strategic event management services. We understand the importance of showcasing your products and services to a wider audience. Our team excels in creating visually appealing booths and interactive displays that attract visitors. We handle booth design, logistics, and promotional activities, ensuring your brand stands out. Whether you are launching a new product or building brand awareness, our trade show and expo services are designed to maximize your ROI.",
+    "details": {
+      "servicesInclude": [
+        "Eye-catching booth design and setup",
+        "Product demonstration and interactive displays",
+        "Lead generation and visitor engagement",
+        "Promotional material creation",
+        "On-site logistics and support",
+        "Post-event analytics and reporting"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "name": "Team Building Workshops",
+    "image": "teambuilding-image.jpg",
+    "price": "Starting at $300",
+    "description": "Foster a positive work culture and enhance teamwork with our engaging team building workshops. Our customized workshops are designed to improve communication, collaboration, and problem-solving skills among your employees. We offer a variety of activities and challenges that encourage teamwork and creativity. From outdoor adventures to indoor exercises, our workshops cater to diverse preferences. Let us help you build a cohesive and motivated team that drives your business towards success.",
+    "details": {
+      "servicesInclude": [
+        "Customized team building activities",
+        "Communication and trust-building exercises",
+        "Problem-solving challenges",
+        "Leadership development workshops",
+        "Team bonding games and events",
+        "Professional facilitation and debrief sessions"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "name": "Product Launches",
+    "image": "productlaunch-image.jpg",
+    "price": "Starting at $700",
+    "description": "Launch your products with style and impact. Our product launch services are focused on creating buzz and excitement around your offerings. We handle everything from event conceptualization to execution, ensuring a memorable launch experience. Our team works closely with you to understand your product and target audience, allowing us to plan engaging launch events. From media interactions to product demonstrations, we craft events that leave a lasting impression on attendees. Let us elevate your product launches to new heights.",
+    "details": {
+      "servicesInclude": [
+        "Event planning for optimal space utilization",
+        "Audio and visual setup for impactful presentations",
+        "Virtual room styling with lights and projections",
+        "Multimedia content including 3D Projection Mapping",
+        "Innovative set design and lighting systems",
+        "Themed event environments aligned with your brand",
+        "Live webcasting and video conferencing",
+        "Social media integration and live updates"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "name": "Corporate Meetings",
+    "image": "meeting-image.jpg",
+    "price": "Starting at $400",
+    "description": "Host productive and efficient corporate meetings with our expert meeting management services. We understand the importance of seamless communication and collaboration in corporate settings. Our team assists in venue selection, audio-visual setup, and agenda planning. We ensure that every participant is engaged and that the meeting objectives are met. Whether it's a small boardroom meeting or a large-scale corporate gathering, we handle all aspects to make your meetings impactful and successful.",
+    "details": {
+      "servicesInclude": [
+        "Venue selection and setup for professional atmosphere",
+        "Agenda planning and coordination",
+        "Audio-visual support for presentations",
+        "Interactive participant engagement",
+        "Catering and refreshment services",
+        "Real-time transcription and documentation",
+        "Post-meeting follow-ups and action item tracking"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "name": "Award Ceremonies",
+    "image": "awardceremony-image.jpg",
+    "price": "Starting at $600",
+    "description": "Recognize and celebrate achievements with our elegant award ceremony services. We specialize in organizing prestigious award ceremonies that honor outstanding individuals and teams. From venue decoration to award design, we pay attention to every detail to create a sophisticated atmosphere. Our team ensures a smooth flow of the event, managing award presentations and speeches. Let us create a memorable evening that celebrates accomplishments and motivates your attendees to reach greater heights.",
+    "details": {
+      "servicesInclude": [
+        "Venue decoration and themed setup",
+        "Award design and customization",
+        "Speech and announcement coordination",
+        "Live streaming for remote attendees",
+        "Red carpet and photography services",
+        "Entertainment and cultural performances",
+        "Event recording and post-ceremony highlights"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "name": "Workshops and Training Sessions",
+    "image": "workshop-image.jpg",
+    "price": "Starting at $350",
+    "description": "Enhance the skills and knowledge of your workforce with our interactive workshops and training sessions. We offer a wide range of training programs tailored to different industries and job roles. Our expert trainers deliver engaging sessions that cover essential topics and practical applications. Whether it's leadership training, technical skills development, or team dynamics workshops, we ensure your employees gain valuable insights. Invest in the growth of your team with our comprehensive workshop and training solutions.",
+    "details": {
+      "servicesInclude": [
+        "Expert-led training sessions",
+        "Interactive workshops and hands-on exercises",
+        "Customized training materials",
+        "Skill assessments and progress tracking",
+        "Certification and recognition programs",
+        "Post-training resources and support"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "name": "Business Networking Events",
+    "image": "networking-event.jpg",
+    "price": "Starting at $450",
+    "description": "Facilitate meaningful connections and expand your business opportunities with our professional networking events. We organize targeted networking events that bring together industry professionals, potential clients, and partners. Our team creates a conducive environment for networking, providing opportunities for one-on-one interactions and business collaborations. From themed networking sessions to panel discussions, our events encourage productive conversations and relationship building. Boost your business network with our tailored networking events.",
+    "details": {
+      "servicesInclude": [
+        "Targeted industry-specific networking sessions",
+        "Panel discussions and knowledge-sharing forums",
+        "Business matchmaking and introductions",
+        "Interactive networking games and activities",
+        "Collaborative workshops and brainstorming sessions",
+        "Post-event networking support and introductions"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "name": "Incentive Travel Programs",
+    "image": "travel-program.jpg",
+    "price": "Starting at $1200",
+    "description": "Reward your employees or clients with luxurious incentive travel experiences. Our incentive travel programs are designed to inspire and motivate. We curate unforgettable travel itineraries to exotic destinations, ensuring a perfect balance of relaxation and adventure. From private guided tours to exclusive dining experiences, our programs offer unparalleled luxury. Let us create personalized travel incentives that recognize achievements and foster loyalty. Elevate your rewards program with our premium incentive travel services.",
+    "details": {
+      "servicesInclude": [
+        "Customized travel itineraries to exotic destinations",
+        "Exclusive guided tours and cultural experiences",
+        "Luxurious accommodations and dining experiences",
+        "Adventure activities and exploration",
+        "Private transportation and transfers",
+        "Personalized concierge services",
+        "Memorable group excursions and team-building activities"
+      ]
+    }
+  }
+]
