@@ -1,17 +1,9 @@
-import { useEffect } from "react";
 import slider1 from "../../assets/slider1.jpg";
 import slider2 from "../../assets/slider2.jpg";
 import slider3 from "../../assets/slider3.jpg";
 import slider4 from "../../assets/slider4.jpg";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Banner = () => {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
-
   return (
     <div className="carousel w-full max-h-[80vh]">
       <div id="slide1" className="carousel-item relative w-full">
