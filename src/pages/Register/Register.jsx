@@ -15,11 +15,18 @@ const Register = () => {
     const photo = e.target.photo.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(name, photo, email, password);
-    if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{6,}$/.test(password)) {
+    if (password.length < 6) {
       return swal(
         "Oops!",
-        "Password should be uppercase letter, special symbol, and at least 6 characters!",
+        "Password should be at least 6 characters!",
+        "error"
+      );
+    } else if (
+      !/^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{6,}$/.test(password)
+    ) {
+      return swal(
+        "Oops!",
+        "Password should be uppercase letter and special symbol!",
         "error"
       );
     }

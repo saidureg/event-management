@@ -5,6 +5,8 @@ import { BsGoogle } from "react-icons/bs";
 import { useContext } from "react";
 import { AuthContext } from "../../provide/AuthProvide";
 import { GoogleAuthProvider } from "firebase/auth";
+import swal from "sweetalert";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { signIn, user, googleLogin } = useContext(AuthContext);
@@ -13,14 +15,16 @@ const Login = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return swal("Oops!", "Please Provide a valid email", "error");
+    }
     e.target.reset();
     signIn(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        toast("You have successfully logged in");
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
+        return swal("Oops!", "Invalid email or password", "error");
       });
   };
 
@@ -28,11 +32,11 @@ const Login = () => {
 
   const handleGoogleSignIn = () => {
     googleLogin(googleProvide)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        toast("You have successfully logged in");
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
+        return swal("Oops!", "Invalid email or password", "error");
       });
   };
 

@@ -8,10 +8,10 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        console.log("Sign-out successful");
+        return swal("Oops!", "Sign-out successful", "warning");
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
+        return swal("Oops!", "Something went wrong!", "error");
       });
   };
 
