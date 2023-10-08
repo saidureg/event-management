@@ -4,7 +4,9 @@
     "name": "Conferences and Seminars",
     "image": "https://i.ibb.co/DRjWnK5/conference.webp",
     "thumbnail": "https://i.ibb.co/hR0j7fm/Conferences-des.jpg",
-    "price": "Starting at $500",
+    "price": 500,
+    "visited": 2150,
+    "title": "Elevate Your Business with Expertly Managed Conferences and Seminars",
     "description": "Our professional conference and seminar management services are tailored to meet the unique needs of your business. We meticulously plan and execute conferences and seminars that engage your audience and deliver your message effectively. From finding the perfect venue to organizing impactful keynote speakers, our team handles every detail. We create a seamless experience for both presenters and attendees, ensuring smooth registration processes and interactive sessions. Let us transform your ideas into successful, knowledge-sharing events.",
     "details": {
       "servicesInclude": [
@@ -22,7 +24,9 @@
     "name": "Trade Shows and Expos",
     "image": "https://i.ibb.co/RjNKYBR/Trade.jpg",
     "thumbnail": "https://i.ibb.co/kgQvh58/Trade-des.webp",
-    "price": "Starting at $800",
+    "price": 800,
+    "visited": 1850,
+    "title": "Boost Your Presence with Impactful Trade Shows and Expos",
     "description": "Make a lasting impression at trade shows and expos with our strategic event management services. We understand the importance of showcasing your products and services to a wider audience. Our team excels in creating visually appealing booths and interactive displays that attract visitors. We handle booth design, logistics, and promotional activities, ensuring your brand stands out. Whether you are launching a new product or building brand awareness, our trade show and expo services are designed to maximize your ROI.",
     "details": {
       "servicesInclude": [
@@ -40,7 +44,9 @@
     "name": "Team Building Workshops",
     "image": "https://i.ibb.co/bvdnGFv/Team.webp",
     "thumbnail": "https://i.ibb.co/6tGYsdP/Team-des.jpg",
-    "price": "Starting at $300",
+    "price": 300,
+    "visited": 1320,
+    "title": "Strengthen Your Team with Tailored Team Building Workshops",
     "description": "Foster a positive work culture and enhance teamwork with our engaging team building workshops. Our customized workshops are designed to improve communication, collaboration, and problem-solving skills among your employees. We offer a variety of activities and challenges that encourage teamwork and creativity. From outdoor adventures to indoor exercises, our workshops cater to diverse preferences. Let us help you build a cohesive and motivated team that drives your business towards success.",
     "details": {
       "servicesInclude": [
@@ -58,7 +64,9 @@
     "name": "Product Launches",
     "image": "https://i.ibb.co/fnkrcf9/Product.webp",
     "thumbnail": "https://i.ibb.co/bF9fQcf/Product-des.webp",
-    "price": "Starting at $700",
+    "price": 700,
+    "visited": 2780,
+    "title": "Unveil Your Products in Style with Memorable Launch Events",
     "description": "Launch your products with style and impact. Our product launch services are focused on creating buzz and excitement around your offerings. We handle everything from event conceptualization to execution, ensuring a memorable launch experience. Our team works closely with you to understand your product and target audience, allowing us to plan engaging launch events. From media interactions to product demonstrations, we craft events that leave a lasting impression on attendees. Let us elevate your product launches to new heights.",
     "details": {
       "servicesInclude": [
@@ -78,7 +86,9 @@
     "name": "Corporate Meetings",
     "image": "https://i.ibb.co/FsnGNz2/Corporate.jpg",
     "thumbnail": "https://i.ibb.co/9TSZ59J/Corporate-des.jpg",
-    "price": "Starting at $400",
+    "price": 400,
+    "visited": 3200,
+    "title": "Efficient Corporate Meetings Tailored to Your Business Goals",
     "description": "Host productive and efficient corporate meetings with our expert meeting management services. We understand the importance of seamless communication and collaboration in corporate settings. Our team assists in venue selection, audio-visual setup, and agenda planning. We ensure that every participant is engaged and that the meeting objectives are met. Whether it's a small boardroom meeting or a large-scale corporate gathering, we handle all aspects to make your meetings impactful and successful.",
     "details": {
       "servicesInclude": [
@@ -97,7 +107,9 @@
     "name": "Award Ceremonies",
     "image": "https://i.ibb.co/YWn8fZd/Award.png",
     "thumbnail": "https://i.ibb.co/3vV2BCn/Award-des.webp",
-    "price": "Starting at $600",
+    "price": 600,
+    "visited": 1980,
+    "title": "Create Lasting Memories with Prestigious Award Ceremonies",
     "description": "Recognize and celebrate achievements with our elegant award ceremony services. We specialize in organizing prestigious award ceremonies that honor outstanding individuals and teams. From venue decoration to award design, we pay attention to every detail to create a sophisticated atmosphere. Our team ensures a smooth flow of the event, managing award presentations and speeches. Let us create a memorable evening that celebrates accomplishments and motivates your attendees to reach greater heights.",
     "details": {
       "servicesInclude": [
