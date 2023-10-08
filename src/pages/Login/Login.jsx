@@ -2,8 +2,27 @@ import { Link } from "react-router-dom";
 import Navbar from "../../components/Header/Navbar";
 import loginImg from "../../assets/secure_login.png";
 import { BsGoogle } from "react-icons/bs";
+import { useContext } from "react";
+import { AuthContext } from "../../provide/AuthProvide";
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+    e.target.reset();
+    signIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <div>
       <Navbar />
@@ -13,13 +32,14 @@ const Login = () => {
             <img src={loginImg} alt="" />
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-[#7B014C]/80">
-            <form className="card-body">
+            <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text text-white">Email</span>
                 </label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="email"
                   className="input input-bordered"
                   required
@@ -32,6 +52,7 @@ const Login = () => {
                 <input
                   type="password"
                   placeholder="password"
+                  name="password"
                   className="input input-bordered"
                   required
                 />
@@ -44,9 +65,9 @@ const Login = () => {
               <div>
                 <p className="text-white flex items-center gap-3 mt-5">
                   Login with
-                  <button className=" hover:text-xl ml-2 hover:opacity-70 btn flex items-center gap-2">
+                  <span className=" hover:text-xl ml-2 hover:opacity-70 btn flex items-center gap-2">
                     <BsGoogle className=""></BsGoogle> Google
-                  </button>
+                  </span>
                 </p>
               </div>
               <p className="text-white mt-3">

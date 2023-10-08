@@ -1,7 +1,21 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { useContext } from "react";
+import { AuthContext } from "../../provide/AuthProvide";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        console.log("Sign-out successful");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   const navLinks = (
     <>
       <li>
@@ -49,11 +63,20 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <Link to="/login">
-          <button className="btn hover:text-[#7B014C] bg-[#7B014C] text-[#F1EAEA]">
-            Login
+        {user ? (
+          <button
+            onClick={handleLogOut}
+            className="btn hover:text-[#7B014C] bg-[#7B014C] text-[#F1EAEA]"
+          >
+            Log Out
           </button>
-        </Link>
+        ) : (
+          <Link to="/login">
+            <button className="btn hover:text-[#7B014C] bg-[#7B014C] text-[#F1EAEA]">
+              Login
+            </button>
+          </Link>
+        )}
       </div>
     </div>
   );
