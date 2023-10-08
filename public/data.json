@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "name": "Conferences and Seminars",
     "image": "https://i.ibb.co/DRjWnK5/conference.webp",
     "thumbnail": "https://i.ibb.co/hR0j7fm/Conferences-des.jpg",
@@ -20,7 +20,7 @@
     }
   },
   {
-    "id": 2,
+    "id": "2",
     "name": "Trade Shows and Expos",
     "image": "https://i.ibb.co/RjNKYBR/Trade.jpg",
     "thumbnail": "https://i.ibb.co/kgQvh58/Trade-des.webp",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "id": 3,
+    "id": "3",
     "name": "Team Building Workshops",
     "image": "https://i.ibb.co/bvdnGFv/Team.webp",
     "thumbnail": "https://i.ibb.co/6tGYsdP/Team-des.jpg",
@@ -60,7 +60,7 @@
     }
   },
   {
-    "id": 4,
+    "id": "4",
     "name": "Product Launches",
     "image": "https://i.ibb.co/fnkrcf9/Product.webp",
     "thumbnail": "https://i.ibb.co/bF9fQcf/Product-des.webp",
@@ -82,7 +82,7 @@
     }
   },
   {
-    "id": 5,
+    "id": "5",
     "name": "Corporate Meetings",
     "image": "https://i.ibb.co/FsnGNz2/Corporate.jpg",
     "thumbnail": "https://i.ibb.co/9TSZ59J/Corporate-des.jpg",
@@ -103,7 +103,7 @@
     }
   },
   {
-    "id": 6,
+    "id": "6",
     "name": "Award Ceremonies",
     "image": "https://i.ibb.co/YWn8fZd/Award.png",
     "thumbnail": "https://i.ibb.co/3vV2BCn/Award-des.webp",

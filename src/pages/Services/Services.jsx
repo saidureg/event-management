@@ -1,6 +1,13 @@
 import PropTypes from "prop-types";
+import { BsEyeFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 const Services = ({ service }) => {
-  const { name, image, price, description } = service;
+  const { id, name, image, price, description, visited } = service;
+
+  const handleSeeDetails = () => {
+    console.log("btn click");
+  };
+
   return (
     <div className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
       <div className="relative mx-4 mt-4 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
@@ -28,9 +35,9 @@ const Services = ({ service }) => {
           </span>
         </button>
       </div>
-      <div className="p-6">
+      <div className="p-6 flex-1">
         <div className="mb-3 flex items-center justify-between">
-          <h5 className="block font-sans text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
+          <h5 className="block text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
             {name}
           </h5>
           <p className="flex items-center gap-1.5 font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
@@ -50,23 +57,30 @@ const Services = ({ service }) => {
             5.0
           </p>
         </div>
-        <p className="block font-sans text-base font-light leading-relaxed text-gray-700 antialiased">
-          {description.length > 150
-            ? description.slice(0, 150) + " ......."
+        <p className="block text-base font-light leading-relaxed text-gray-700 antialiased">
+          {description.length > 140
+            ? description.slice(0, 140) + " ......."
             : description}
         </p>
-        <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
-          <p>Price :{price}</p>
+        <div className="group mt-6 flex justify-between items-center gap-3 text-xl">
+          <p>Starting at : ${price}</p>
+          <span className="flex items-center gap-3">
+            <BsEyeFill></BsEyeFill>
+            {visited}
+          </span>
         </div>
       </div>
-      <div className="p-6 pt-3 ">
-        <button
-          className="block w-full select-none rounded-lg bg-pink-500 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-          type="button"
-          data-ripple-light="true"
-        >
-          Reserve
-        </button>
+      <div className="p-6 pt-3">
+        <Link to={`/servicesDetails/${id}`}>
+          <button
+            onClick={handleSeeDetails}
+            className="block w-full select-none rounded-lg bg-pink-500 py-3.5 px-7 text-center align-middle text-lg font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            type="button"
+            data-ripple-light="true"
+          >
+            See Details
+          </button>
+        </Link>
       </div>
     </div>
   );
