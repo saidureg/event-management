@@ -1,4 +1,4 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/Header/Navbar";
 import registerImg from "../../assets/Access_account.png";
 import { useContext } from "react";
@@ -7,8 +7,8 @@ import { updateProfile } from "firebase/auth";
 import swal from "sweetalert";
 import { toast } from "react-toastify";
 const Register = () => {
-  const { createUser, user } = useContext(AuthContext);
-
+  const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -40,6 +40,7 @@ const Register = () => {
         })
           .then(() => {
             toast("Account created successfully");
+            navigate("/");
           })
           .catch(() => {
             return swal("Oops!", "Something went wrong!", "error");
@@ -111,7 +112,6 @@ const Register = () => {
               <div className="form-control mt-6">
                 <button className="btn btn-primary hover:text-xl hover:scale-105">
                   Register
-                  {user && <Navigate to={"/"}></Navigate>}
                 </button>
               </div>
               <p className="mt-3">

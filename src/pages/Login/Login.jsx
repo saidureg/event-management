@@ -1,4 +1,4 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../components/Header/Navbar";
 import loginImg from "../../assets/secure_login.png";
 import { BsGoogle } from "react-icons/bs";
@@ -9,7 +9,9 @@ import swal from "sweetalert";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const { signIn, user, googleLogin } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { signIn, googleLogin } = useContext(AuthContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -22,6 +24,7 @@ const Login = () => {
     signIn(email, password)
       .then(() => {
         toast("You have successfully logged in");
+        navigate(location?.state ? location.state : "/");
       })
       .catch(() => {
         return swal("Oops!", "Invalid email or password", "error");
@@ -34,6 +37,7 @@ const Login = () => {
     googleLogin(googleProvide)
       .then(() => {
         toast("You have successfully logged in");
+        navigate(location?.state ? location.state : "/");
       })
       .catch(() => {
         return swal("Oops!", "Invalid email or password", "error");
@@ -77,7 +81,6 @@ const Login = () => {
               <div className="form-control mt-6">
                 <button className="btn bg-white text-black hover:text-xl hover:scale-105">
                   Login
-                  {user && <Navigate to={"/"}></Navigate>}
                 </button>
               </div>
               <div>
