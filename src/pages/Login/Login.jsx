@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import Navbar from "../../components/Header/Navbar";
 import loginImg from "../../assets/secure_login.png";
 import { BsGoogle } from "react-icons/bs";
 import { useContext } from "react";
 import { AuthContext } from "../../provide/AuthProvide";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, user, googleLogin } = useContext(AuthContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -15,6 +16,18 @@ const Login = () => {
     console.log(email, password);
     e.target.reset();
     signIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const googleProvide = new GoogleAuthProvider();
+
+  const handleGoogleSignIn = () => {
+    googleLogin(googleProvide)
       .then((result) => {
         console.log(result.user);
       })
@@ -60,13 +73,17 @@ const Login = () => {
               <div className="form-control mt-6">
                 <button className="btn bg-white text-black hover:text-xl hover:scale-105">
                   Login
+                  {user && <Navigate to={"/"}></Navigate>}
                 </button>
               </div>
               <div>
                 <p className="text-white flex items-center gap-3 mt-5">
                   Login with
-                  <span className=" hover:text-xl ml-2 hover:opacity-70 btn flex items-center gap-2">
-                    <BsGoogle className=""></BsGoogle> Google
+                  <span
+                    onClick={handleGoogleSignIn}
+                    className=" hover:text-xl ml-2 hover:opacity-70 btn flex items-center gap-2"
+                  >
+                    <BsGoogle /> Google
                   </span>
                 </p>
               </div>

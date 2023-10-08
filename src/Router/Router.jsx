@@ -5,6 +5,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import ServicesDetails from "../pages/Services/ServicesDetails";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import PrivateRouter from "../provide/PrivateRouter";
 
 const Router = createBrowserRouter([
   {
@@ -19,7 +20,11 @@ const Router = createBrowserRouter([
       },
       {
         path: "/servicesDetails/:id",
-        element: <ServicesDetails></ServicesDetails>,
+        element: (
+          <PrivateRouter>
+            <ServicesDetails></ServicesDetails>
+          </PrivateRouter>
+        ),
         loader: () => fetch("/data.json"),
       },
       {

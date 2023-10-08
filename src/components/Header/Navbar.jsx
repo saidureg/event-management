@@ -5,7 +5,6 @@ import { AuthContext } from "../../provide/AuthProvide";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-
   const handleLogOut = () => {
     logOut()
       .then(() => {
@@ -64,12 +63,22 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <button
-            onClick={handleLogOut}
-            className="btn hover:text-[#7B014C] bg-[#7B014C] text-[#F1EAEA]"
-          >
-            Log Out
-          </button>
+          <>
+            <div className="flex flex-col items-center mr-5">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img src={user?.photoURL} />
+                </div>
+              </label>
+              <h3>{user?.displayName}</h3>
+            </div>
+            <button
+              onClick={handleLogOut}
+              className="btn hover:text-[#7B014C] bg-[#7B014C] text-[#F1EAEA]"
+            >
+              Log Out
+            </button>
+          </>
         ) : (
           <Link to="/login">
             <button className="btn hover:text-[#7B014C] bg-[#7B014C] text-[#F1EAEA]">

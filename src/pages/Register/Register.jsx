@@ -1,10 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import Navbar from "../../components/Header/Navbar";
 import registerImg from "../../assets/Access_account.png";
 import { useContext } from "react";
 import { AuthContext } from "../../provide/AuthProvide";
+import { updateProfile } from "firebase/auth";
+import swal from "sweetalert";
+import { toast } from "react-toastify";
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, user } = useContext(AuthContext);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -13,13 +16,30 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(name, photo, email, password);
+    if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{6,}$/.test(password)) {
+      return swal(
+        "Oops!",
+        "Password should be uppercase letter, special symbol, and at least 6 characters!",
+        "error"
+      );
+    }
     e.target.reset();
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: photo,
+        })
+          .then(() => {
+            toast("Account created successfully");
+          })
+          .catch(() => {
+            return swal("Oops!", "Something went wrong!", "error");
+          });
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
+        return swal("Oops!", "Something went wrong!", "error");
       });
   };
 
@@ -84,6 +104,7 @@ const Register = () => {
               <div className="form-control mt-6">
                 <button className="btn btn-primary hover:text-xl hover:scale-105">
                   Register
+                  {user && <Navigate to={"/"}></Navigate>}
                 </button>
               </div>
               <p className="mt-3">

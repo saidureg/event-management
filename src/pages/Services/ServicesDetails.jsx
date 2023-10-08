@@ -31,10 +31,12 @@ const ServicesDetails = () => {
           <div className="border border-[#ff881e] p-3 rounded">
             <h3 className="text-xl mt-2 text-[#212529]">Starting at:</h3>
             <table className="border-collapse border border-[#c1a26c] w-full mt-2">
-              <tr>
-                <th className="border border-[#dee2e6] p-3">Regular</th>
-                <th className="border border-[#dee2e6] p-3">${price}</th>
-              </tr>
+              <thead>
+                <tr>
+                  <th className="border border-[#dee2e6] p-3">Regular</th>
+                  <th className="border border-[#dee2e6] p-3">${price}</th>
+                </tr>
+              </thead>
             </table>
           </div>
           <div className="bg-[#ff881e] border border-[#ff881e] rounded p-3 my-6 space-y-3">
