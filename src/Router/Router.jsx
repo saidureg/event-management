@@ -7,6 +7,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRouter from "../provide/PrivateRouter";
 import About from "../pages/About/About";
+import Contact from "../pages/Contact/Contact";
 
 const Router = createBrowserRouter([
   {
@@ -39,6 +40,14 @@ const Router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/contact",
+        element: (
+          <PrivateRouter>
+            <Contact />
+          </PrivateRouter>
+        ),
       },
     ],
   },
