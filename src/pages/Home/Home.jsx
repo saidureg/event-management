@@ -4,6 +4,7 @@ import Navbar from "../../components/Header/Navbar";
 import Footer from "../Footer/Footer";
 import Services from "../Services/Services";
 import Gallery from "../../components/Gallery/Gallery";
+import ChooseUs from "../../components/ChooseUs/ChooseUs";
 
 const Home = () => {
   const services = useLoaderData();
@@ -14,6 +15,7 @@ const Home = () => {
       {/* Services section */}
       <div className="max-w-7xl mx-auto my-16">
         <h3 className="text-center text-5xl mb-3">Our Services</h3>
+        <div className="border-2 w-[250px] md:w-[280px] mx-auto mb-3"></div>
         <p className="text-center text-xl text-gray-700 mb-8">
           We make your events smart & impactful by personalized event management
           services
@@ -25,7 +27,7 @@ const Home = () => {
         </div>
       </div>
       <Gallery />
-
+      <ChooseUs />
       <Footer />
     </div>
   );
