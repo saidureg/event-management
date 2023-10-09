@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
+`Explain:` First, here declared a variable as `greeting`, Instead, there's an attempt to create an object and assign it to a misspelled variable `greetign`. `greeting` variable is not being used. However, JavaScript is allows to create a new variable by misspelling an existing one. In this case, `greetign` becomes a new global variable, and `greeting` remains undefined.
 
 </p>
 </details>
@@ -43,9 +43,12 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+`Explain:` In this code, when sum function called with two parameters then it try to add these two parameters and returns the result.
+Then, the function sum is called with the arguments 1 and "2".
+Here, 1 is number and "2" is string. In this case, it will try to convert the number 1 to a string and concatenate it with the string "2". Because JavaScript does automatic type conversion.
+However, the + operator is used for both addition and string concatenation. So, "1" is concatenated with "2". when function calls and stores a variable, it console log the variable and displays the result "12".
 
 </p>
 </details>
@@ -69,9 +72,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
+`Explain:` In this code, there is an array food containing four food items. There is also an object info with a property favoriteFood, try to reassigning a new food item here. However, this reassignment does not affect the original food array in any way. Because in JavaScript arrays and objects are reference types variables. it is actually stores references to the memory locations. So, modification of the info object's property does not affect the original food array.
 
 </p>
 </details>
@@ -94,9 +97,10 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+`Explain:` In this code, there's a JavaScript function called sayHi that takes one parameter name. The function returns a string that includes the provided name parameter inside a template literal.
+when the function is called its expects a name parameter to be passed but here no argument is provided. So, the name parameter inside the function is undefined.
 
 </p>
 </details>
@@ -122,9 +126,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+`Explain:` In this code, there's a variable count initialized to 0 and an array nums containing four elements: [0, 1, 2, 3]. ForEach method is used on the nums array. Inside the forEach loop, its takes a parameter num and the function checks the current element num is truthy or not, if it is truthy then it increments the count variable by 1. Only 0 elements in this nums array is false value.
 
 </p>
 </details>
