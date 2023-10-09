@@ -3,6 +3,7 @@ import Banner from "../../components/Header/Banner";
 import Navbar from "../../components/Header/Navbar";
 import Footer from "../Footer/Footer";
 import Services from "../Services/Services";
+import Gallery from "../../components/Gallery/Gallery";
 
 const Home = () => {
   const services = useLoaderData();
@@ -10,6 +11,7 @@ const Home = () => {
     <div>
       <Navbar></Navbar>
       <Banner />
+      {/* Services section */}
       <div className="max-w-7xl mx-auto my-16">
         <h3 className="text-center text-5xl mb-3">Our Services</h3>
         <p className="text-center text-xl text-gray-700 mb-8">
@@ -22,6 +24,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Gallery />
 
       <Footer />
     </div>

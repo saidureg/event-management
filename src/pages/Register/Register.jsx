@@ -42,12 +42,12 @@ const Register = () => {
             toast("Account created successfully");
             navigate("/");
           })
-          .catch(() => {
-            return swal("Oops!", "Something went wrong!", "error");
+          .catch((error) => {
+            return swal("Oops!", error.message, "error");
           });
       })
-      .catch(() => {
-        return swal("Oops!", "Something went wrong!", "error");
+      .catch((error) => {
+        return swal("Oops!", error.message, "error");
       });
   };
 

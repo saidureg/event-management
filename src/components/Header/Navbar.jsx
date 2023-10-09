@@ -14,8 +14,8 @@ const Navbar = () => {
           "warning"
         );
       })
-      .catch(() => {
-        return swal("Oops!", "Something went wrong!", "error");
+      .catch((error) => {
+        return swal("Oops!", error.message, "error");
       });
   };
 
@@ -60,7 +60,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <img className="w-[120px] md:w-[150px]" src={logo} alt="logo" />
+        <img className="w-[100px] md:w-[150px]" src={logo} alt="logo" />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
@@ -68,13 +68,15 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <>
-            <div className="flex flex-col items-center mr-5">
+            <div className="flex flex-col items-center justify-center md:mr-5">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full">
+                <div className="w-7 md:w-10 rounded-full">
                   <img src={user?.photoURL} />
                 </div>
               </label>
-              <h3>{user?.displayName}</h3>
+              <h3 className="text-gray-700 text-xs md:text-lg font-medium ml-1 md:ml-0">
+                {user?.displayName}
+              </h3>
             </div>
             <button
               onClick={handleLogOut}

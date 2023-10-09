@@ -26,8 +26,8 @@ const Login = () => {
         toast("You have successfully logged in");
         navigate(location?.state ? location.state : "/");
       })
-      .catch(() => {
-        return swal("Oops!", "Invalid email or password", "error");
+      .catch((error) => {
+        return swal("Oops!", error.message, "error");
       });
   };
 
@@ -39,8 +39,8 @@ const Login = () => {
         toast("You have successfully logged in");
         navigate(location?.state ? location.state : "/");
       })
-      .catch(() => {
-        return swal("Oops!", "Invalid email or password", "error");
+      .catch((error) => {
+        return swal("Oops!", error.message, "error");
       });
   };
 
