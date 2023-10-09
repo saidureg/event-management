@@ -8,6 +8,7 @@ import Register from "../pages/Register/Register";
 import PrivateRouter from "../provide/PrivateRouter";
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
+import RecentEvent from "../pages/RecentEvent/RecentEvent";
 
 const Router = createBrowserRouter([
   {
@@ -48,6 +49,15 @@ const Router = createBrowserRouter([
             <Contact />
           </PrivateRouter>
         ),
+      },
+      {
+        path: "/recent-event",
+        element: (
+          <PrivateRouter>
+            <RecentEvent />
+          </PrivateRouter>
+        ),
+        loader: () => fetch("/event.json"),
       },
     ],
   },

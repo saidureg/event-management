@@ -6,6 +6,17 @@ const ServicesDetails = () => {
   const services = useLoaderData();
   const selectService = services.find((service) => service.id === id);
   const { name, title, thumbnail, description, price, details } = selectService;
+
+  const handleBooking = (e) => {
+    e.preventDefault();
+    e.target.reset();
+    swal(
+      "Event Booking successfully",
+      "Our team will contact you soon",
+      "success"
+    );
+  };
+
   return (
     <div>
       <Navbar />
@@ -62,21 +73,24 @@ const ServicesDetails = () => {
             <p className="text-sm text-gray-700">
               Please leave your details and let us take care of the rest
             </p>
-            <form>
+            <form onSubmit={handleBooking}>
               <input
                 type="text"
                 placeholder="Company Name"
+                required
                 className="py-3 px-4 w-full bg-[#e9ecef] bg-opacity-90 rounded text-lg mb-2"
               />
               <input
                 type="number"
                 placeholder="Mobile Number"
+                required
                 className="py-3 px-4 w-full bg-[#e9ecef] bg-opacity-90 rounded text-lg mb-2"
               />
               <input
                 type="datetime"
                 name="date"
                 placeholder="Date"
+                required
                 className="py-3 px-4 w-full bg-[#e9ecef] bg-opacity-90 rounded text-lg mb-2"
               />
               <textarea

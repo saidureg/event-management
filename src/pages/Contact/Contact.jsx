@@ -6,8 +6,10 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsPhone } from "react-icons/bs";
 
 const Contact = () => {
-  const handleContactForm = () => {
-    swal("Thanks", "Our team will contact you soon", "success");
+  const handleContactForm = (e) => {
+    e.preventDefault();
+    e.target.reset();
+    swal("Successfully sent", "Our team will contact you soon", "success");
   };
 
   return (
@@ -70,7 +72,6 @@ const Contact = () => {
                 name="text"
                 placeholder="Your Message"
                 className="input input-bordered"
-                required
                 id=""
                 cols="30"
                 rows="30"
