@@ -1,8 +1,32 @@
-# React + Vite
+# Event Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+Here are the key features and functionalities of my project:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **User Authentication:**
+
+   - User can created account and log in and also login with google account.
+
+2. **Personalized User Profiles:**
+
+   - When user log in successfully then show user profile picture and name.
+
+3. **Services Details:**
+
+   - Users can view detailed information by clicking on a specific Services.
+   - Each servise page includes a description,see more Services, and a button to make a booking.
+
+4. **Event Booking and Management:**
+
+   - User can booking the event but now we can not storage the booking data.
+
+5. **Recent Event:**
+
+   - User can view our recent events organized by our team.
+
+6. **Sign Out:**
+
+   - User can logout from this website if he/she wants.
+
+7. **Responsive Design for Mobile and tablet:**
